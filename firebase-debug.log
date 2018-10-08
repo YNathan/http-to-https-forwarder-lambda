@@ -1,0 +1,71 @@
+[debug] [2018-09-07T23:42:50.071Z] ----------------------------------------------------------------------
+[debug] [2018-09-07T23:42:50.072Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jacky\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-09-07T23:42:50.073Z] CLI Version:   4.0.0
+[debug] [2018-09-07T23:42:50.073Z] Platform:      win32
+[debug] [2018-09-07T23:42:50.073Z] Node Version:  v9.1.0
+[debug] [2018-09-07T23:42:50.073Z] Time:          Sat Sep 08 2018 02:42:50 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-09-07T23:42:50.073Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-07T23:42:50.083Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-07T23:42:50.084Z] > authorizing via signed-in user
+[debug] [2018-09-07T23:42:50.086Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/monitorfrontend  
+  
+ Sat Sep 08 2018 02:42:50 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-09-07T23:42:51.073Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-07T23:42:51.074Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/monitorfrontend/tokens  
+  
+ Sat Sep 08 2018 02:42:51 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-09-07T23:42:51.816Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-07T23:42:51.819Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/monitorfrontend  
+  
+ Sat Sep 08 2018 02:42:51 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-09-07T23:42:52.938Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\devl\work\GIT_WS\Comroads-GIT\fb-functions'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-07T23:42:54.836Z] Fetching environment
+[debug] [2018-09-07T23:42:54.841Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/801803698154:getServerAppConfig  
+  
+ Sat Sep 08 2018 02:42:54 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-09-07T23:42:55.479Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-07T23:42:55.480Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-07T23:42:59.574Z] Parsing function triggers
+[info] +  functions: all_data: http://localhost:5000/monitorfrontend/us-central1/all_data
+[info] +  functions: report_of_trip: http://localhost:5000/monitorfrontend/us-central1/report_of_trip
+[info] +  functions: current_trips: http://localhost:5000/monitorfrontend/us-central1/current_trips
+[info] +  functions: last_week_data: http://localhost:5000/monitorfrontend/us-central1/last_week_data
+[info] +  functions: stop_simulator: http://localhost:5000/monitorfrontend/us-central1/stop_simulator
+[info] +  functions: top_drivers: http://localhost:5000/monitorfrontend/us-central1/top_drivers
+[info] +  functions: get_events_points: http://localhost:5000/monitorfrontend/us-central1/get_events_points
+[debug] [2018-10-08T10:58:32.731Z] ----------------------------------------------------------------------
+[debug] [2018-10-08T10:58:32.733Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jacky\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-08T10:58:32.734Z] CLI Version:   4.0.0
+[debug] [2018-10-08T10:58:32.734Z] Platform:      win32
+[debug] [2018-10-08T10:58:32.734Z] Node Version:  v9.1.0
+[debug] [2018-10-08T10:58:32.734Z] Time:          Mon Oct 08 2018 13:58:32 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-10-08T10:58:32.734Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-08T10:58:32.759Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-08T10:58:32.761Z] > authorizing via signed-in user
+[debug] [2018-10-08T10:58:32.764Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-08T10:58:32.764Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/gp95oUoIP9pgIddm_bLyIwMMs1t85n9dOuGwW3DIlWw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Oct 08 2018 13:58:32 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-10-08T10:58:40.211Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-08T10:58:40.231Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/monitorfrontend  
+  
+ Mon Oct 08 2018 13:58:40 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-10-08T10:58:45.935Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-08T10:58:45.936Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/monitorfrontend/tokens  
+  
+ Mon Oct 08 2018 13:58:45 GMT+0300 (Jerusalem Daylight Time)
+[debug] [2018-10-08T10:58:58.058Z] Error: read ECONNRESET
+    at _errnoException (util.js:1031:13)
+    at TLSWrap.onread (net.js:619:25)
+[error] 
+[error] Error: Server Error. read ECONNRESET
