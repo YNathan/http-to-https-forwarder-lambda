@@ -12,6 +12,7 @@ const express = require("express");
 const serveIpAndPortUrl = 'http://api.comroads.com:5611';
 //public serveIpAndPortUrl = 'http://192.168.252.10:5611';
 const getDataAnalyricUrl = this.serveIpAndPortUrl + '/api/all_data';
+const getUsersUrl = this.serveIpAndPortUrl + '/api/users';
 const getEventsPointsUrl = this.serveIpAndPortUrl + '/api/get_events_points';
 const getTopDriversUrl = this.serveIpAndPortUrl + '/api/top_drivers';
 const getStopSimulatorUrl = this.serveIpAndPortUrl + '/api/stop_simulator';
@@ -150,20 +151,66 @@ var headers = {
     'Content-Type': 'application/x-www-form-urlencoded'
 }
 
+
 /* Express with CORS */
 const app = express()
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
-
-
 });
 app.use(cors({ origin: true }))
 /*app.get("*", (request, response) => {
-  response.send("Hello from Express on Firebase with CORS!")
+  response.send("Hello You")
+});*/
+
+/*
+// Add headers
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'https://monitorfrontend.firebaseapp.com');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
 });
 */
+app.get("/users", (request, response) => {
+    var options = {
+        host: 'api.comroads.com',
+        port: 5611,
+        path: '/api/users'
+    };
+
+    http.get(options, function (http_res) {
+        // initialize the container for our data
+        var data = "";
+
+        // this event fires many times, each time collecting another piece of the response
+        http_res.on("data", function (chunk) {
+            // append this chunk to our growing `data` var
+            data += chunk;
+        });
+
+        // this event fires *one* time, after all the `data` events/chunks have been gathered
+        http_res.on("end", function () {
+            // you can use res.send instead of console.log to output via express
+            response.send(JSON.parse(data));
+        });
+    });
+});
+
+
 app.get("/current_trips", (request, response) => {
     var options = {
         host: 'api.comroads.com',
@@ -187,6 +234,7 @@ app.get("/current_trips", (request, response) => {
         });
     });
 });
+
 app.get("/last_week_data", (request, response) => {
     var options = {
         host: 'api.comroads.com',
